@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fija el fondo */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+.background.visible {
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  padding: 20px;
+  color: #fff; /* Ajusta el color del texto para mejor legibilidad */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Añade sombra al texto para mayor legibilidad */
+}
